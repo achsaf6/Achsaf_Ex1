@@ -1,19 +1,20 @@
 @import url("reset.css");
 /* This is a custom font from google fonts */
 @import url("https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sriracha&display=swap");
 
 /* what is :root? https://developer.mozilla.org/en-US/docs/Web/CSS/:root */
 :root {
   /* Define design variables */
-  --color-primary: #2b2d42;
-  --color-secondary: #bfc6d2;
-  --color-background: #f5f5f5;
-  --color-accent: #535bf2;
+  --color-primary: #1A1A1D;
+  --color-secondary: #3B1C32;
+  --color-background: #6A1E55;
+  --color-accent: #A64D79;
 
   --border-radius: 0.5rem;
 
-  --font-titles: "Frank Ruhl Libre", serif;
-  --font-body: system-ui, sans-serif; /* system-ui matches the user's system font */
+  --font-titles: Sriracha;
+  --font-body: system-ui /* system-ui matches the user's system font */
 }
 
 body {
@@ -77,6 +78,41 @@ h1 {
   font-size: 2.5em;
 }
 
+.container {
+    display: flex; /* Enables flexbox on the container */
+    align-items: center;
+}
+
+div {
+  width: 100px;
+}
+
+.click-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50; /* Initial color */
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.1s ease, background-color 0.1s ease;
+}
+
+.click-button:hover {
+  background-color: #45a049; /* Slightly darker shade on hover */
+}
+
+.click-button:active {
+  transform: scale(0.95); /* Scale down slightly */
+  background-color: #3e8e41; /* Even darker shade on click */
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 h2 {
   font-size: 2em;
 }
@@ -107,6 +143,7 @@ a {
   color: var(--color-accent);
   text-decoration: underline;
 }
+
 a:hover {
   text-decoration: none;
 }
@@ -143,7 +180,8 @@ fieldset {
   width: 2rem;
   height: 2rem;
   color: white;
-  border: none;
+  border: 5px;
+  border-color: aquamarine;
   border-radius: 1000px; /* Make the button round */
   cursor: pointer;
   font-weight: bold;
