@@ -18,6 +18,10 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   color: var(--color-primary);
   background-color: var(--color-background);
   font-family: var(--font-body);
@@ -30,6 +34,11 @@ main {
 
 header {
   padding: 1rem;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
 }
 
 main,
@@ -81,10 +90,34 @@ h1 {
 .container {
     display: flex; /* Enables flexbox on the container */
     align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+
+
+.f-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 20em;
+}
+
+.square{
+  width: 20em;
+  height: 10em;
+  background-color: #1A1A1D;
+  transition: background-color  3s, width 3s, height 3s;
+}
+
+.square:hover{
+  height: 50em;
+  width: 200em;
+  background-color: #45a049;
 }
 
 div {
-  width: 100px;
+  max-width: 10em;
 }
 
 .click-button {
